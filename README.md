@@ -2,8 +2,11 @@
   <h1>🌌 JobPortal Pro</h1>
   <p>The ultimate destination for premium developers to find their next big leap.</p>
 
-  <!-- Animated Screenshots / Walkthrough -->
-  <img src="demo.webp" alt="Job App Walkthrough" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+  <!-- App Screenshots -->
+  <div style="display: flex; gap: 10px; justify-content: center; align-items: center; flex-wrap: wrap;">
+    <img src="screenshot1.png" alt="Home Page" width="400" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 10px;" />
+    <img src="screenshot2.png" alt="Jobs Page" width="400" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 10px;" />
+  </div>
 
   <h3>Built With Modern Tech Stack</h3>
   <p>
@@ -51,4 +54,4 @@ Unlike traditional, rigid enterprise Java applications, JobPortal Pro demonstrat
    ```
    
 ---
-*Note: A complete animated screenshare demo of the app features is embedded at the very top of this repository!*
+*Note: High-quality screenshots of the app features are embedded at the very top of this repository!*
