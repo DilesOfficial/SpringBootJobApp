@@ -1,0 +1,91 @@
+body { font-family: 'Inter', sans-serif; cursor: default; }
+
+/* Custom Cursor Follower */
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #4f46e5;
+}
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(79, 70, 229, 0.8);
+    background-color: rgba(79, 70, 229, 0.05); /* very light */
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+.custom-cursor {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: 999999;
+    transform: translate(-50%, -50%);
+}
+
+/* Floating Animation Keyframes */
+@keyframes float-1 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+@keyframes float-2 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(-10deg); }
+}
+@keyframes float-3 {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-25px) scale(1.1); }
+}
+
+.float-fast { animation: float-1 4s ease-in-out infinite; }
+.float-slow { animation: float-2 6s ease-in-out infinite; }
+.float-scale { animation: float-3 5s ease-in-out infinite; }
+
+/* Entry Text Animations */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+
+/* Floating Icons Layout */
+.tech-icon {
+    position: absolute;
+    opacity: 0.15;
+    filter: grayscale(0.4);
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+.tech-icon:hover {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+
+/* Essential for gradient text */
+.typewriter-gradient {
+    background: linear-gradient(to right, #4f46e5, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cursor-blink {
+    display: inline-block;
+    width: 4px;
+    height: 1em;
+    background-color: #4f46e5;
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
