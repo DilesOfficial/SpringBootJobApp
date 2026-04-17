@@ -1,6 +1,9 @@
 package com.dilusha.jobapp;
 
+import com.dilusha.jobapp.model.JobPost;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -11,7 +14,7 @@ public class JobController {
         return "home";
     }
 
-    @RequestMapping("addjob")
+    @GetMapping("addjob")
     public String addJob(){
         return "addjob";
     }
@@ -19,5 +22,10 @@ public class JobController {
     @RequestMapping("viewalljobs")
     public String viewAllJobs(){
         return "viewalljobs";
+    }
+
+    @PostMapping("handleForm")
+    public String handleForm(JobPost jobPost){
+        return "success";
     }
 }
